@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
@@ -9,13 +9,26 @@ import Awards from './Awards';
 const pages = ({ user }) => {
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" element={<Me user={user} />} />
-        <Route path="/projects" element={<Projects user={user} />} />
-        <Route path="/work" element={<Work user={user} />} />
-        <Route path="/education" element={<Education user={user} />} />
-        <Route path="/awards" element={<Awards user={user} />} />
-      </Routes>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Link to ="/portfolio_app1"/>
+      </BrowserRouter>
+      <Switch>
+        <Route exact path="/portfolio_app1/">
+          <Me user={user} />
+        </Route>
+        <Route path="/portfolio_app1/projects">
+          <Projects user={user} />
+        </Route>
+        <Route path="/portfolio_app1/work">
+          <Work user={user} />
+        </Route>
+        <Route path="/portfolio_app1/education">
+          <Education user={user} />
+        </Route>
+        <Route path="/portfolio_app1/awards">
+          <Awards user={user} />
+        </Route>
+      </Switch>
     </Router>
   );
 };
