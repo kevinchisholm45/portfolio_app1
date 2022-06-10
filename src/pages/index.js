@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
@@ -12,7 +12,7 @@ const pages = ({ user }) => {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Link to ="/portfolio_app1"/>
       </BrowserRouter>
-      <Switch>
+      <Routes>
         <Route exact path="/portfolio_app1/">
           <Me user={user} />
         </Route>
@@ -28,7 +28,7 @@ const pages = ({ user }) => {
         <Route path="/portfolio_app1/awards">
           <Awards user={user} />
         </Route>
-      </Switch>
+      </Routes>
     </Router>
   );
 };
