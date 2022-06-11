@@ -1,7 +1,7 @@
 {
   "name": "portfolio_app1",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "http://kevinchisholm45.github.io/portfolio_app1",
   "dependencies": {
     "@carbon/icons-react": "^11.4.0",
