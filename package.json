@@ -1,7 +1,7 @@
 {
   "name": "portfolio_app1",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "http://kevinchisholm45.github.io/portfolio_app1",
   "dependencies": {
     "@carbon/icons-react": "^11.4.0",
@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

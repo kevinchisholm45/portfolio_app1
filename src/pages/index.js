@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, HashRouter } from 'react-router-dom';
 import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
@@ -9,9 +9,9 @@ import Awards from './Awards';
 const pages = ({ user }) => {
   return (
     <Router>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
           <Link to ="/portfolio_app1"/>
-      </BrowserRouter>
+      </HashRouter>
       <Routes>
         <Route exact path="/portfolio_app1/">
           <Me user={user} />
