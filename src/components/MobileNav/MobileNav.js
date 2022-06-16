@@ -1,14 +1,15 @@
 import React from 'react'
-import { User, Code, Portfolio, Education } from '@carbon/icons-react'
+import { User, Code, Portfolio, Education, Trophy } from '@carbon/icons-react'
 
-import { Container, Spacer, NavWrapper, NavButton, NavLink } from './styles'
+import { Container, Spacer, NavWrapper, NavButton, NavLink, NameHeader } from './styles'
 
-const MobileNav = () => {
+const MobileNav = ({ user }) => {
   return (
     <Container>
       <Spacer />
       <NavWrapper>
-        <NavLink to="/portfolio_app1">
+        
+        <NavLink to="/portfolio_app1/">
           <NavButton
             hasIconOnly
             renderIcon={User}
@@ -16,7 +17,7 @@ const MobileNav = () => {
             tooltipPosition="bottom"
           />
         </NavLink>
-        <NavLink to="portfolio_app1/projects">
+        <NavLink to="/portfolio_app1/projects">
           <NavButton
             hasIconOnly
             renderIcon={Code}
@@ -24,7 +25,7 @@ const MobileNav = () => {
             tooltipPosition="bottom"
           />
         </NavLink>
-        <NavLink to="portfolio_app1/work">
+        <NavLink to="/portfolio_app1/work">
           <NavButton
             hasIconOnly
             renderIcon={Portfolio}
@@ -32,7 +33,7 @@ const MobileNav = () => {
             tooltipPosition="bottom"
           />
         </NavLink>
-        <NavLink to="portfolio_app1/education">
+        <NavLink to="/portfolio_app1/education">
           <NavButton
             hasIconOnly
             renderIcon={Education}
@@ -40,15 +41,16 @@ const MobileNav = () => {
             tooltipPosition="bottom"
           />
         </NavLink>
-        <NavLink to="portfolio_app1/awards">
+        <NavLink to="/portfolio_app1/awards">
           <NavButton
             hasIconOnly
-            renderIcon={User}
+            renderIcon={Trophy}
             iconDescription="Awards"
             tooltipPosition="bottom"
           />
         </NavLink>
       </NavWrapper>
+      <NameHeader>{"Kevin Chisholm"}</NameHeader>
     </Container>
   )
 }
