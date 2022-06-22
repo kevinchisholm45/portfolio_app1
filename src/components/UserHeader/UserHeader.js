@@ -8,7 +8,7 @@ const UserHeader = ({ user }) => {
     return (
         <HeaderContainer isHome={location.pathname === '/'}>
             <Header>
-                <Image src={user.basics.picture} />
+                <Image src={require('../../photos/profilePhoto1.jpeg')} />
                 <div>
                 <NameHeader>{user.basics.name}</NameHeader>
                 <h4>
